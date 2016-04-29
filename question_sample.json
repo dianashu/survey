@@ -1,0 +1,56 @@
+[
+  {
+    "type":"SDesc",
+    "description":"This is a section description. SDesc is used for description. SEnd is used for the page separator."   
+  }
+  ,
+  {
+    "type":"CSMCQ",
+    "description":"This is an example of a MCQ question with the possibility of logic control.",
+    "choices":["choice 1","choice 2","choice 3","choice 4"],
+    "visible":"vis",
+    "control":1,
+    "control_set":[[1,2],[1,1],[2,2],[0,0]]
+  }
+  ,
+  {    
+    "type":"SMCQ",
+    "description":"This is an example of single choice MCQ question.",
+    "choices":["choice 1","choice 2","choice 3","choice 4"],
+    "visible":"invis"
+  } 
+  ,
+  {    
+    "type":"SText",
+    "description":"This is an example of question with short text answer.",
+    "visible":"invis"
+  } 
+  ,
+  {
+    "type":"SEnd"
+  }
+  ,
+  {    
+    "type":"MMCQ",
+    "description":"This is an example of multiple choice MCQ.",
+    "choices":["choice 1","choice 2","choice 3","choice 4"],
+    "visible":"vis"
+  }
+  ,
+  {
+    "type":"LText",
+    "description":"This is an example of question with long text answer.",
+    "visible":"vis"
+  } 
+  ,
+  {
+    "type":"SEnd"
+  }
+  ,
+  {
+    "type":"Menu",
+    "description":"This is an example of a dropdown menu.",
+    "choices":["choice 1","choice 2","choice 3","choice 4"],
+    "visible":"vis"
+  } 
+]

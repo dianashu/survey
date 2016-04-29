@@ -1,0 +1,201 @@
+[
+  {
+    "type":"MMCQ",
+    "description":"Purchase Time Slot.",
+    "choices":["breakfast","lunch","afternoon tea","after work", "evening"],
+    "visible":"vis"
+    
+  }
+  ,
+  {
+   "type":"LText",
+    "description":"1.What kind of food did you purchase today?.",
+    "visible":"vis"
+  }
+  ,
+  {
+    "type":"SMCQ",
+    "description":"Overall Evaluation.",
+    "choices":["Poor","Average","Good"],
+    "visible":"vis"
+  }
+  ,
+  {
+    "type":"SDesc",
+    "description":"Food Quality."   
+  }
+  ,
+  {
+    "type":"SMCQ",
+    "description":"Presentation.",
+    "choices":["Poor","Average","Good"],
+    "visible":"vis"
+  }
+  ,
+  {
+    "type":"SMCQ",
+    "description":"Taste.",
+    "choices":["Poor","Average","Good"],
+    "visible":"vis"
+  }
+  ,
+  {
+    "type":"SMCQ",
+    "description":"Temperature.",
+    "choices":["Poor","Average","Good"],
+    "visible":"vis"
+  }
+  ,
+  {
+    "type":"SMCQ",
+    "description":"Portion.",
+    "choices":["Poor","Average","Good"],
+    "visible":"vis"
+  }
+  ,
+  {
+    "type":"SEnd"
+  }
+  , 
+  {
+    "type":"SDesc",
+    "description":"Service of Staff."   
+  }
+  ,
+  {
+    "type":"SMCQ",
+    "description":"Courtesy.",
+    "choices":["Poor","Average","Good"],
+    "visible":"vis"
+  }
+  ,
+  {
+    "type":"SMCQ",
+    "description":"Appearance.",
+    "choices":["Poor","Average","Good"],
+    "visible":"vis"
+  }
+  ,
+  {
+    "type":"SMCQ",
+    "description":"Product Knowledge.",
+    "choices":["Poor","Average","Good"],
+    "visible":"vis"
+  }
+  ,
+  {
+    "type":"SMCQ",
+    "description":"Attentiveness.",
+    "choices":["Poor","Average","Good"],
+    "visible":"vis"
+  }
+  ,
+  {
+    "type":"SMCQ",
+    "description":"Overall Waiting Time.",
+    "choices":["Poor","Average","Good"],
+    "visible":"vis"
+  }
+  ,
+ {
+   "type":"SEnd"
+ }
+ ,
+ {
+    "type":"SDesc",
+    "description":"Shop Environment."   
+  }
+  ,
+  {
+    "type":"SMCQ",
+    "description":"Shop Appearance.",
+    "choices":["Poor","Average","Good"],
+    "visible":"vis"
+  }
+  ,
+  {
+    "type":"SMCQ",
+    "description":"Cleanliness.",
+    "choices":["Poor","Average","Good"],
+    "visible":"vis"
+  }
+  ,
+  {
+    "type":"SMCQ",
+    "description":"Ambience.",
+    "choices":["Poor","Average","Good"],
+    "visible":"vis"
+  }
+  ,
+  {
+    "type":"SMCQ",
+    "description":"Temperature.",
+    "choices":["Poor","Average","Good"],
+    "visible":"vis"
+  }
+  ,
+{
+   "type":"SEnd"
+}
+,
+{
+    "type":"SMCQ",
+    "description":"Product Pricing.",
+    "choices":["Poor","Average","Good"],
+    "visible":"vis"
+}
+, 
+{
+   "type":"SMCQ",
+    "description":"Product Packaging.",
+    "choices":["Poor","Average","Good"],
+    "visible":"vis"
+}
+,
+{
+  "type":"SMCQ",
+    "description":"How many times do you buy bakery products every week?",
+    "choices":["below twice/week","2-3 times/week","4-5 times/week", "6-7 times/week", "above 7 times/week"],
+    "visible":"vis"
+}
+, 
+{
+    "type":"CSMCQ",
+    "description":"Will you visit our shop next time?",
+    "choices":["Must visit again and would recommend this shop to my friends","Maybe","Never"],
+    "visible":"vis",
+    "control":1,
+    "control_set":[[0,0],[0,0],[1,1]]
+}
+, 
+
+    {    
+    "type":"SText",
+    "description":"Reasons.",
+    "visible":"invis"
+  } 
+  ,  
+  {
+    "type":"LText",
+    "description":"5.Staff to be recognized",
+    "visible":"vis"
+  }
+  ,
+  {
+    "type":"LText",
+    "description":"6.Favorite food type in our shop.",
+    "visible":"vis"
+  }
+  ,
+  {
+    "type":"LText",
+    "description":"7.Proposed new food type in our shop.",
+    "visible":"vis"
+  }
+  ,
+  {
+    "type":"LText",
+    "description":"8.Other comments.",
+    "visible":"vis"
+  }
+]
