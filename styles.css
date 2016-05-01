@@ -40,6 +40,11 @@ body {
 	border-radius:0.25em;
 }
 
+input[type=radio]{
+	width:0.625em;
+	height:0.625em;
+}
+
 input[type=text].form-control{
 	height: 3em;
 }
