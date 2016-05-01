@@ -1,5 +1,6 @@
 body {
-   background:#eee;
+   background: #eee;
+   font-size: 30px;
 }
 
 .form-header{
@@ -13,6 +14,7 @@ body {
 .form-header h2{
 	margin: 0;
 	color: #fff;
+	font-size: 2.5em;
 }
 
 .form-body{
@@ -20,8 +22,34 @@ body {
 	padding-top: 0;
 }
 
+.form-body h3{
+	margin:0;
+	margin-top: 1em;
+	font-size: 1.5em;
+	text-align: center;
+}
+
+.form-body h4{
+	font-size: 1.125em;
+	margin: 0.75em 0;
+}
+
 .form-control{
-	font-size: 0.875em;
+	font-size: 1em;
+	padding: 0.5em;
+}
+
+input[type=text].form-control{
+	height: 3em;
+}
+
+textarea.form-control{
+	height: 9em;
+}
+
+.btn{
+	font-size: 1.25em;
+	padding: 0.5em;
 }
 
 label.form-control{
@@ -45,9 +73,10 @@ label.last_0{
 footer{
 	text-align: center;
 	background: #337AB7;
+	font-size: 1em;
 }
 
 footer p{
-	padding: 0.25em 0;
+	padding: 0.5em 0;
 	color: #fff;
 }

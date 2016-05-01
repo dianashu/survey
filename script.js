@@ -18,7 +18,7 @@ $(document).ready(function(){
         s++;
         surveyHTML+='<fieldset id="S'+s+'">';
       }else{                                   //Type: Question
-        surveyHTML+='<div class="'+question.visible+'"><h5><br>'+question.description+'</h5>';
+        surveyHTML+='<div class="'+question.visible+'"><h4><br>'+question.description+'</h4>';
            
         if(question.type==="SText"){
           surveyHTML+='<input type="text" name="Q'+i+'" class="form-control"></div>';
