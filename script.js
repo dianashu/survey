@@ -46,7 +46,7 @@ $(document).ready(function(){
           surveyHTML+='<div onclick="controlAll($(this))">';
           $.each(question.choices,function(c,choice){
 			style_control=question.choices.length-c-1;
-            surveyHTML+='<label class="form-control first_'+c+' last_'+style_control+'"><input type="radio" onclick="control($(this),'+question.control+','+question.control_set[c]+')" value='+c+' name="Q'+i+'">'+choice+'</label>';
+            surveyHTML+='<label class="form-control first_'+c+' last_'+style_control+'"><input type="radio" onclick="control($(this),'+question.control+','+question.control_set[c]+')" value='+c+' name="Q'+i+'">'+' '+choice+'</label>';
           });          
           surveyHTML+='</div></div>';
         }        
