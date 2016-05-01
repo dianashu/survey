@@ -1,6 +1,6 @@
 [
   {
-    "type":"MMCQ",
+    "type":"SMCQ",
     "description":"Purchase Time Slot.",
     "choices":["breakfast","lunch","afternoon tea","after work", "evening"],
     "visible":"vis"
@@ -8,8 +8,8 @@
   }
   ,
   {
-   "type":"LText",
-    "description":"1.What kind of food did you purchase today?.",
+   "type":"SText",
+    "description":"What kind of food did you purchase today?",
     "visible":"vis"
   }
   ,
@@ -18,6 +18,10 @@
     "description":"Overall Evaluation.",
     "choices":["Poor","Average","Good"],
     "visible":"vis"
+  }
+  ,
+  {
+    "type":"SEnd"
   }
   ,
   {

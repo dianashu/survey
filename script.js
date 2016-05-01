@@ -6,32 +6,34 @@ $(document).ready(function(){
     var surveyHTML='<fieldset id="S1" class="current">';
     var s=1;
     $.each(data,function(i,question){
-      if(question.type==="SDesc"){ //Type:Section Description
-        surveyHTML+='<div><label>'+question.description+'</label></div>';
-      }else if(question.type==="SEnd"){ //Type: Section End
+      if(question.type==="SDesc"){             //Type:Section Description
+        surveyHTML+='<h3>'+question.description+'</h3>';
+      }else if(question.type==="SEnd"){        //Type: Section End
         if(s===1){
-          surveyHTML+='<div><button type="button" class="next_button">Next</button></div>';
+          surveyHTML+='<br><button type="button" class="btn btn-block next_button">Next</button>';
         }else{
-          surveyHTML+='<div><button type="button" class="prev_button">Previous</button><button type="button" class="next_button">Next</button></div>';
+          surveyHTML+='<br><button type="button" class="btn btn-block prev_button">Previous</button><button type="button" class="btn btn-block next_button">Next</button>';
         }
         surveyHTML+='</fieldset>';
         s++;
         surveyHTML+='<fieldset id="S'+s+'">';
-      }else{ //Type: Question
-        surveyHTML+='<div class="'+question.visible+'"><label>'+question.description+'</label><br>';
+      }else{                                   //Type: Question
+        surveyHTML+='<div class="'+question.visible+'"><h5><br>'+question.description+'</h5>';
            
         if(question.type==="SText"){
-          surveyHTML+='<input type="text" name="Q'+i+'"></div>';
+          surveyHTML+='<input type="text" name="Q'+i+'" class="form-control"></div>';
         }else if(question.type==="LText"){
-          surveyHTML+='<textarea name="Q'+i+'"></textarea></div>';
+          surveyHTML+='<textarea name="Q'+i+'" class="form-control"></textarea></div></div>';
         }else if(question.type==="SMCQ"){
           $.each(question.choices,function(c,choice){
-            surveyHTML+='<input type="radio" value='+c+' name="Q'+i+'"><label>'+choice+'</label>';
+			style_control=question.choices.length-c-1;
+            surveyHTML+='<label class="form-control first_'+c+' last_'+style_control+'"><input type="radio" value='+c+' name="Q'+i+'" id="Q'+i+'_'+c+'">'+' '+choice+'</label>';
           });          
           surveyHTML+='</div>';
         }else if(question.type==="MMCQ"){
           $.each(question.choices,function(c,choice){
-            surveyHTML+='<input type="checkbox" value='+c+' name="Q'+i+'"><label>'+choice+'</label>';
+			style_control=question.choices.length-c-1;
+            surveyHTML+='<label class="form-control first_'+c+' last_'+style_control+'"><input type="checkbox" value='+c+' name="Q'+i+'" id="Q'+i+'_'+c+'">'+' '+choice+'</label>';
           });
           surveyHTML+='</div>';
         }else if(question.type==="Menu"){
@@ -43,13 +45,14 @@ $(document).ready(function(){
         }else if(question.type==="CSMCQ"){ //Control MCQ
           surveyHTML+='<div onclick="controlAll($(this))">';
           $.each(question.choices,function(c,choice){
-            surveyHTML+='<input type="radio" onclick="control($(this),'+question.control+','+question.control_set[c]+')" value='+c+' name="Q'+i+'"><label>'+choice+'</label>';
+			style_control=question.choices.length-c-1;
+            surveyHTML+='<label class="form-control first_'+c+' last_'+style_control+'"><input type="radio" onclick="control($(this),'+question.control+','+question.control_set[c]+')" value='+c+' name="Q'+i+'">'+choice+'</label>';
           });          
           surveyHTML+='</div></div>';
         }        
       }//end Question rendering
     });//end survey rendering
-    surveyHTML+='<div><button type="button" onclick="prevPage()">Previous</button></div><div><button id="submit">Submit</button></div></fieldset>';   
+    surveyHTML+='<br><button type="button" class="btn btn-block prev_button">Previous</button><button id="submit" class="btn btn-block btn-success">Submit</button></fieldset>';   
     $('#survey').html(surveyHTML);    
   });
   
@@ -75,11 +78,11 @@ function prevPage(){
 
 
 function controlAll(docObj){
-  buttons=docObj.children('input');
-  $.each(buttons,function(i,button){
-    button.onclick();
+  radios=docObj.find('input');
+  $.each(radios,function(i,radio){
+    radio.onclick();
   });
-  checked=docObj.children('input:checked');
+  checked=docObj.find('input:checked');
   checked[0].onclick();
 };
 
@@ -87,7 +90,7 @@ function controlAll(docObj){
 function control(docObj,control_type,start,end){
   if(start>0){
     var ref=1;
-    var refObj=docObj.parent().parent().next();
+    var refObj=docObj.parent().parent().parent().next();
       if((control_type===1&&docObj.is(':checked'))||(control_type===-1&&!docObj.is(':checked'))){
         while(ref<=end){
           if(start<=ref){
